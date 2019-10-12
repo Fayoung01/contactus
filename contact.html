@@ -2,68 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Contact Us</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0e498dcbfc.js" crossorigin="anonymous"></script>
+    
     <style>
     body {
         font-family: 'Nunito', sans-serif;
+        width: 100%;
+        height: 100vh;
         padding:0px;
         margin:0px;
+        box-sizing: border-box;
     }
     .header {
-    background: #fff;
+        background: #fff;
+        width: 100%;
     
-}
-.header_container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.header_logo {
-    display: flex;
-    align-items: center;
-    margin-left:0px;
-}
-.header_logo h3 {
-    
-    font-size: 32px;
-    margin-top: 10px;
-    font-weight: bold;
-}
-.header_image {
-    width: 100%;
-}
-.nav_list {
-    list-style: none;
-    display: flex;
-}
-.nav_item {
-    padding: 30px 15px 25px 15px;
-}
-.nav_link {
-    text-decoration: none;
-    font-weight: bolder;
-    color: #2A2B2A;
-    
-}
-.nav_btn {
-    text-decoration: none;
-    font-weight: bold;
-    border: 1px solid #44CF6C;
-    background: #44CF6C;
-    padding: 8px 42px;
-    border-radius: 10px;
-    color: #fff;
-}
-    .contact{
+    }
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 11rem 0 1rem;
+    }
+    .header_container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .header_logo {
+        display: flex;
+        align-items: center;
+        margin-left:0px;
+    }
+    .header_logo h3 {
+        font-size: 32px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    .header_image {
+        width: 100%;
+    }
+    .nav_list {
+        list-style: none;
+        display: flex;
+    }
+    .nav_item {
+        padding: 30px 15px 25px 15px;
+    }
+    .nav_link {
+        text-decoration: none;
+        font-weight: bolder;
+        color: #2A2B2A;
         
+    }
+    .nav_btn {
+        text-decoration: none;
+        font-weight: bold;
+        border: 1px solid #44CF6C;
+        background: #44CF6C;
+        padding: 8px 42px;
+        border-radius: 10px;
+        color: #fff;
+    }
+    .contact{
         width:50%;
         display: inline-block;
-        
-        
     }
     .contact-us {
         font-size:40px;
@@ -132,7 +138,7 @@
         height: 35px;
     }
     .label {
-        margin-bottom: 20px; ;
+        margin-bottom: 20px; 
     }
     textarea {
         width:100%;
@@ -228,6 +234,165 @@
         
     }
 
+    /* Responsiveness - Ipads and tablets */
+    @media screen and (max-width: 768px) {
+        .header_container {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+        }
+        .header_logo{
+            display: block;
+            width: 25%;
+            margin: 0 auto;
+            margin-bottom: 0;
+        }
+        .nav_item {
+            padding: 0;
+            margin: 0 5px;
+        }
+        .nav_link {
+            display: block;
+            padding-left: 15px;
+            
+        }
+        .contact{
+            margin-bottom: 20px;
+        }
+        .contact-us {
+            font-size:30px;
+            margin-left:15%;
+            margin-top: 50px;
+            bottom:0px;
+            
+        }
+        .svg{
+            display: none;
+        }
+        .inner-answer {
+            width: 75%;
+        }
+        .row1 {
+            padding:20px;
+        }
+        #search {
+            height:40px;
+            width: 70%;
+            
+        }
+        #search-but {
+            height:40px;
+            left:-7px;
+            top: -7px;
+        }
+        .sec-submit {
+            width: 100%;
+        }
+        .cust {
+            font-size:30px;
+        }
+        .foot{
+            display: block;
+            margin: auto;
+        }
+        .full {
+            display: grid;
+            grid-template-columns: 25% 70%;
+            margin: auto;
+        }
+        .footer-list{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            margin-left:50px;
+        }
+        .footer-logo {
+            display: inline-block;
+            width:20%;
+        }
+           
+    }
+    /* Responsiveness - mobile */
+    @media screen and (max-width: 411px) {
+        .header_container{
+            display: block;
+            padding-top:0;
+            margin-top: 0;
+        }
+        .nav_list {
+            display: grid;
+            grid-gap: 0;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            align-items: center;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        .nav_item {
+            display: inline;
+        }
+        .nav_link {
+            padding: 0rem 1rem 0 0rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .contact{
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .contact-us {
+            font-size:20px;
+            margin-left:60%;
+            margin-top: 50px;
+            bottom:0px;
+        }
+        .inner-answer {
+            width: 150%;
+            margin-left: 50px;
+        }
+        #search {
+            height:40px;
+            width: 70%;
+            
+        }
+        #search-but {
+            width: 70px;
+            top: -7px;
+        }
+        .form {
+            width: 100%;
+            margin-left: 10px;
+        }
+        .col {
+            display: block;
+            width:100%;
+        }
+        .col1 {
+            display: block;
+            width:100%;
+        }
+        input {
+            width:100%;
+            border-color: #44CF6C;
+        }
+        .label {
+            margin-bottom: 5px; 
+        }
+        .cust {
+            font-size:25px;
+            margin-top: 0;
+            line-height: 1.3;
+        }
+        .full{
+            margin: 0 auto;
+        }
+        .footer-list{
+            display: none;
+        }
+        
+    }
+
     </style>
 </head>
 <body>
@@ -251,7 +416,7 @@
             
     <main>
         
-        <section>
+        <section class="container">
             <div class="contact">
                 <h1 class="contact-us">CONTACT US</h1>
             </div>
@@ -263,15 +428,17 @@
     
 
         <section class="answer">
-            <div class="inner-answer">
+            <div class="container">
+                <div class="inner-answer">
                     <input type="search" id="search" placeholder="Find answers now!">
 
                     <button id="search-but">Search Our FAQ Page</button>
-        
+                </div>
             </div>
+            
         </section>
 
-        <section class="form"> 
+        <section class="form container"> 
 
             <div class="row1">
 
@@ -331,93 +498,99 @@
         </section>
 
         <section class="customer">
-            <div class="customer-inner">
-                <h2 class="cust">CUSTOMER SUPPORT</h2>
-                <p class="cust-text">Call +234805000000 or send a mail to support@start.ng</p>
+            <div class="container">
+                <div class="customer-inner">
+                    <h2 class="cust">CUSTOMER SUPPORT</h2>
+                    <p class="cust-text">Call +234805000000 or send a mail to support@start.ng</p>
+                </div>
             </div>
+            
         </section>
 
          <!-- Footer -->
         <footer class="foot ">
+            <div class="container">
+                    <div class="full">
+                            <div class="footer-logo">
+                                <img src="https://res.cloudinary.com/josh4324/image/upload/v1570782786/Logo_1_1_gtgy0d.png" alt="logo">
+                                <p class="leap">Ready to take the leap?</p>
+                                <a href="#"><button class="footer-but">Start!</button></a>
+                            </div>
+                
+                            <div class="footer-list" >
+                                    
+                                    <div class="list">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a href="#!">About us</a>
+                                            </li>
+                                             <li>
+                                                <a href="#!">Our Course</a>
+                                             </li>
+                                            <li>
+                                                <a href="#!">Hire a Grad</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                
+                                    <div class="list" >
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a href="#!">Curriculum</a>
+                                            </li>
+                                            <li>
+                                                <a href="#!">Blog</a>
+                                            </li>
+                                            <li>
+                                                <a href="#!">Student stories</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                
+                                    <div class="list">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a href="#!">Find a course</a>
+                                             </li>
+                                            <li>
+                                                <a href="#!">Our partners</a>
+                                            </li>
+                                            <li>
+                                                <a href="#!">Contact us</a>
+                                            </li>
+                                        </ul>
+                                  </div>
+                
+                                  <div class="list">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a href="#!">FAQ</a>
+                                            </li>
+                                            <li>
+                                                <a href="#!">Terms of service</a>
+                                            </li>
+                                            <li>
+                                                <a href="#!">Privacy policy</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                        </div>
+                    </div>
+                
+                      
+                  
+                
+            </div>
         <!-- Footer Links -->
 
-        <div class="full">
-            <div class="footer-logo">
-                <img src="https://res.cloudinary.com/josh4324/image/upload/v1570782786/Logo_1_1_gtgy0d.png" alt="logo">
-                <p class="leap">Ready to take the leap?</p>
-                <a href="#"><button class="footer-but">Start!</button></a>
-            </div>
-
-            <div class="footer-list" >
-                    
-                    <div class="list">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#!">About us</a>
-                            </li>
-                             <li>
-                                <a href="#!">Our Course</a>
-                             </li>
-                            <li>
-                                <a href="#!">Hire a Grad</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="list" >
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#!">Curriculum</a>
-                            </li>
-                            <li>
-                                <a href="#!">Blog</a>
-                            </li>
-                            <li>
-                                <a href="#!">Student stories</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="list">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#!">Find a course</a>
-                             </li>
-                            <li>
-                                <a href="#!">Our partners</a>
-                            </li>
-                            <li>
-                                <a href="#!">Contact us</a>
-                            </li>
-                        </ul>
-                  </div>
-
-                  <div class="list">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#!">FAQ</a>
-                            </li>
-                            <li>
-                                <a href="#!">Terms of service</a>
-                            </li>
-                            <li>
-                                <a href="#!">Privacy policy</a>
-                            </li>
-                        </ul>
-                    </div>
-        </div>
-    </div>
-
-      
-  
-
-        <div class="footer-inner">
-            <div class="inner-social">
-                <a href="#"><i class="fab fa-twitter"></i></a>  
-                <a href="#"><i class="fab fa-instagram"></i></a> 
-                <a href="#"><i class="fab fa-facebook-f"></i></a> 
-            </div>
-        </div>
+        
+                        <div class="footer-inner">
+                            <div class="inner-social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>  
+                                <a href="#"><i class="fab fa-instagram"></i></a> 
+                                <a href="#"><i class="fab fa-facebook-f"></i></a> 
+                            </div>
+                        </div>
 
 
       </footer>
